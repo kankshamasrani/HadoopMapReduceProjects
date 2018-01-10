@@ -1,0 +1,76 @@
+[root@sandbox-hdp ~]# hadoop jar Sales.jar Sales /UdacitySales/Input /UdacitySales/Output
+18/01/09 06:07:09 INFO client.RMProxy: Connecting to ResourceManager at sandbox-hdp.hortonworks.com/172.17.0.2:8032
+18/01/09 06:07:09 INFO client.AHSProxy: Connecting to Application History server at sandbox-hdp.hortonworks.com/172.17.0.2:10200
+18/01/09 06:07:09 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+18/01/09 06:07:10 INFO input.FileInputFormat: Total input paths to process : 1
+18/01/09 06:07:10 INFO mapreduce.JobSubmitter: number of splits:2
+18/01/09 06:07:11 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1515451368338_0034
+18/01/09 06:07:11 INFO impl.YarnClientImpl: Submitted application application_1515451368338_0034
+18/01/09 06:07:11 INFO mapreduce.Job: The url to track the job: http://sandbox-hdp.hortonworks.com:8088/proxy/application_1515451368338_0034/
+18/01/09 06:07:11 INFO mapreduce.Job: Running job: job_1515451368338_0034
+18/01/09 06:07:22 INFO mapreduce.Job: Job job_1515451368338_0034 running in uber mode : false
+18/01/09 06:07:22 INFO mapreduce.Job:  map 0% reduce 0%
+18/01/09 06:07:36 INFO mapreduce.Job:  map 45% reduce 0%
+18/01/09 06:07:39 INFO mapreduce.Job:  map 55% reduce 0%
+18/01/09 06:07:40 INFO mapreduce.Job:  map 72% reduce 0%
+18/01/09 06:07:42 INFO mapreduce.Job:  map 82% reduce 0%
+18/01/09 06:07:44 INFO mapreduce.Job:  map 100% reduce 0%
+18/01/09 06:07:49 INFO mapreduce.Job:  map 100% reduce 100%
+18/01/09 06:07:50 INFO mapreduce.Job: Job job_1515451368338_0034 completed successfully
+18/01/09 06:07:51 INFO mapreduce.Job: Counters: 49
+        File System Counters
+                FILE: Number of bytes read=3022
+                FILE: Number of bytes written=461768
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+                HDFS: Number of bytes read=211444270
+                HDFS: Number of bytes written=557
+                HDFS: Number of read operations=9
+                HDFS: Number of large read operations=0
+                HDFS: Number of write operations=2
+        Job Counters
+                Launched map tasks=2
+                Launched reduce tasks=1
+                Data-local map tasks=2
+                Total time spent by all maps in occupied slots (ms)=36274
+                Total time spent by all reduces in occupied slots (ms)=6663
+                Total time spent by all map tasks (ms)=36274
+                Total time spent by all reduce tasks (ms)=6663
+                Total vcore-milliseconds taken by all map tasks=36274
+                Total vcore-milliseconds taken by all reduce tasks=6663
+                Total megabyte-milliseconds taken by all map tasks=9068500
+                Total megabyte-milliseconds taken by all reduce tasks=1665750
+        Map-Reduce Framework
+                Map input records=4138476
+                Map output records=4138476
+                Map output bytes=77711522
+                Map output materialized bytes=1508
+                Input split bytes=274
+                Combine input records=4138476
+                Combine output records=72
+                Reduce input groups=18
+                Reduce shuffle bytes=1508
+                Reduce input records=72
+                Reduce output records=18
+                Spilled Records=216
+                Shuffled Maps =2
+                Failed Shuffles=0
+                Merged Map outputs=2
+                GC time elapsed (ms)=2879
+                CPU time spent (ms)=32150
+                Physical memory (bytes) snapshot=499314688
+                Virtual memory (bytes) snapshot=6420414464
+                Total committed heap usage (bytes)=277348352
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+        File Input Format Counters
+                Bytes Read=211443996
+        File Output Format Counters
+                Bytes Written=557
+[root@sandbox-hdp ~]# hdfs dfs -copyToLocal /UdacitySales/Output/part-r-00000
