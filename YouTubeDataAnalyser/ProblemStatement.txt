@@ -1,0 +1,9 @@
+Problem Statement 1:
+Find The Number of Videos uploaded per category.
+
+Problem Statement 2:
+Find Rating for Individual Videos Uploaded.
+
+Problem Statement 3:
+Find Most Viewed Video in each category.
+
