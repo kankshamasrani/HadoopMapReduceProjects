@@ -1,0 +1,18 @@
+ProblemStatement
+
+ReduceSide Join:
+Data Set SalesOrderDetails and Products is joined as per below Query
+
+select P.ProductID, P.Name, P.ProductNumber, Sum(S.OrderQty), Sum(S.LineTotal)
+from SalesOrderDetails S join Products P
+on S.ProductID = P.ProductID
+where S.OrderQty > 0
+
+MapSide Join:
+Data Set SalesOrderDetails,ProductSubCategory and Products is joined as per below Query
+
+select P.ProductID, P.Name, P.ProductNumber, C.Name, Sum(S.OrderQty), Sum(S.LineTotal)
+from SalesOrderDetails S
+join Products P on S.ProductID = P.ProductID
+join ProductSubCategory C on P.ProductSubcategoryId = C.ProductSubcategoryId
+where S.OrderQty > 0
