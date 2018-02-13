@@ -1,0 +1,72 @@
+[root@sandbox-hdp ~]# hadoop jar oracleJoinMapReduce.jar OaracleHRSchemaDataSetJoin/JoinJobDriver /OracleJoinMapReduce/Departments.tsv /OracleJoinMapReduce/Employee.tsv /OracleJoinMapReduce/Output
+18/01/15 11:24:34 INFO client.RMProxy: Connecting to ResourceManager at sandbox-hdp.hortonworks.com/172.17.0.2:8032
+18/01/15 11:24:34 INFO client.AHSProxy: Connecting to Application History server at sandbox-hdp.hortonworks.com/172.17.0.2:10200
+18/01/15 11:24:34 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+18/01/15 11:24:35 INFO input.FileInputFormat: Total input paths to process : 1
+18/01/15 11:24:35 INFO mapreduce.JobSubmitter: number of splits:1
+18/01/15 11:24:35 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1515863061334_0046
+18/01/15 11:24:36 INFO impl.YarnClientImpl: Submitted application application_1515863061334_0046
+18/01/15 11:24:36 INFO mapreduce.Job: The url to track the job: http://sandbox-hdp.hortonworks.com:8088/proxy/application_1515863061334_0046/
+18/01/15 11:24:36 INFO mapreduce.Job: Running job: job_1515863061334_0046
+18/01/15 11:24:47 INFO mapreduce.Job: Job job_1515863061334_0046 running in uber mode : false
+18/01/15 11:24:47 INFO mapreduce.Job:  map 0% reduce 0%
+18/01/15 11:24:55 INFO mapreduce.Job:  map 100% reduce 0%
+18/01/15 11:25:05 INFO mapreduce.Job:  map 100% reduce 100%
+18/01/15 11:25:06 INFO mapreduce.Job: Job job_1515863061334_0046 completed successfully
+18/01/15 11:25:06 INFO mapreduce.Job: Counters: 49
+        File System Counters
+                FILE: Number of bytes read=2059
+                FILE: Number of bytes written=312879
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+                HDFS: Number of bytes read=7394
+                HDFS: Number of bytes written=234
+                HDFS: Number of read operations=6
+                HDFS: Number of large read operations=0
+                HDFS: Number of write operations=2
+        Job Counters
+                Launched map tasks=1
+                Launched reduce tasks=1
+                Data-local map tasks=1
+                Total time spent by all maps in occupied slots (ms)=5740
+                Total time spent by all reduces in occupied slots (ms)=6545
+                Total time spent by all map tasks (ms)=5740
+                Total time spent by all reduce tasks (ms)=6545
+                Total vcore-milliseconds taken by all map tasks=5740
+                Total vcore-milliseconds taken by all reduce tasks=6545
+                Total megabyte-milliseconds taken by all map tasks=1435000
+                Total megabyte-milliseconds taken by all reduce tasks=1636250
+        Map-Reduce Framework
+                Map input records=107
+                Map output records=107
+                Map output bytes=1839
+                Map output materialized bytes=2059
+                Input split bytes=137
+                Combine input records=0
+                Combine output records=0
+                Reduce input groups=12
+                Reduce shuffle bytes=2059
+                Reduce input records=107
+                Reduce output records=12
+                Spilled Records=214
+                Shuffled Maps =1
+                Failed Shuffles=0
+                Merged Map outputs=1
+                GC time elapsed (ms)=398
+                CPU time spent (ms)=2520
+                Physical memory (bytes) snapshot=333606912
+                Virtual memory (bytes) snapshot=4282560512
+                Total committed heap usage (bytes)=152567808
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+        File Input Format Counters
+                Bytes Read=7257
+        File Output Format Counters
+                Bytes Written=234
+[root@sandbox-hdp ~]#
